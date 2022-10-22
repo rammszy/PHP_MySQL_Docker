@@ -99,4 +99,5 @@ Two (02) main folders **(PHP & Database)** and two (02) sub folders inside PHP *
                 docker-php-ext-install mysqli && docker-php-ext-enable mysqli && apachectl restart
 
 ## **Note:**
-   All the files used to build this project are saved in this Git repository.
+  1.  All the files used to build this project are saved in this Git repository.
+  2. Once the container is made down, the data on MySQL database through localhost:**port** is lost, to fix this, once inside the database, [import](https://help.one.com/hc/en-us/articles/115005588189-How-do-I-import-a-database-to-phpMyAdmin-) the previously exported file to the database.
