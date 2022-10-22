@@ -98,6 +98,38 @@ Two (02) main folders **(PHP & Database)** and two (02) sub folders inside PHP *
    
                 docker-php-ext-install mysqli && docker-php-ext-enable mysqli && apachectl restart
 
+## [**Docker Security:**](https://docs.docker.com/engine/security/)
+
+[**Risk and Mitigate:**](https://www.tigera.io/learn/guides/container-security-best-practices/docker-security/#:~:text=Security%20aspects%20include%20base%20images,for%20container%20orchestration%20at%20scale.)
+
+1. **Unrestricted Traffic and Unsafe Communication:**
+- **Rist:** Some Docker versions allow all network traffic on the same host by default, which can result in unintentional exposure of data to the wrong containers.
+- **Mitigate:** Link the desired containers to restrict container access and reduce the attack surface, enabling only necessary and desired communication.
+
+2. **Vulnerable and Malicious Container Images:**
+- **Rist:** Docker Hub is open to everyone, so you should make sure you trust the publisher when you deploy a new repo.
+- **Mitigate:** Avoid untested or untrusted builds to prevent the introduction of vulnerabilities and malicious code.
+
+3. **Unrestricted Access:**
+- **Rist:** Attackers can often gain access to multiple containers once they’ve gained a foothold in the host.
+- **Mitigate:** Apply the principle of least privilege and eliminate root access where possible. 
+
+4. **Host Kernel Vulnerabilities:**
+- **Rist:** The kernel is exposed to the host and all containers.
+- **Mitigate:** Ensure host operating systems are up to date and vigilantly apply security updates
+
+5. **Breaking Out of Containers:**
+- **Rist:** While container breakouts are rare, they are not impossible.
+- **Mitigate:** Never grant root access on the host to a container process.
+
+[**Best Practices:**](https://www.tigera.io/learn/guides/container-security-best-practices/docker-security/#:~:text=Security%20aspects%20include%20base%20images,for%20container%20orchestration%20at%20scale.)
+1. **Avoid Root Permissions:** Docker containers don’t run as root by default, so you don’t have to change the default configuration, but you should avoid giving root permissions. 
+2. **Use Secure Container Registries:** Avoid letting anyone download or upload container images from your registry.
+3. **Limit Resource Usage:** Resource quotas help keep the Docker environment efficient by preventing a single container from consuming too many system resources.
+4. **Scan Your Images:** Keep your Docker images secure with regular vulnerability scans.
+5. **Build Your Networks and APIs for Security:** This communication allows containers to run properly but also requires proper monitoring and security policies.
+6. **Docker Container Monitoring:** Container monitoring tools can help you gain visibility and achieve observability over containerized workloads.
+
 ## **Note:**
   1.  All the files used to build this project are saved in this Git repository.
   2. Once the container is made down, the data on MySQL database through localhost:**port** is lost, to fix this, once inside the database, [import](https://help.one.com/hc/en-us/articles/115005588189-How-do-I-import-a-database-to-phpMyAdmin-) the previously exported file to the database.
