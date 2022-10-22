@@ -103,24 +103,24 @@ Two (02) main folders **(PHP & Database)** and two (02) sub folders inside PHP *
 [**Risk and Mitigate:**](https://www.tigera.io/learn/guides/container-security-best-practices/docker-security/#:~:text=Security%20aspects%20include%20base%20images,for%20container%20orchestration%20at%20scale.)
 
 1. **Unrestricted Traffic and Unsafe Communication:**
-- **Rist:** Some Docker versions allow all network traffic on the same host by default, which can result in unintentional exposure of data to the wrong containers.
-- **Mitigate:** Link the desired containers to restrict container access and reduce the attack surface, enabling only necessary and desired communication.
+   - **Risk:** Some Docker versions allow all network traffic on the same host by default, which can result in unintentional exposure of data to the wrong containers.
+   - **Mitigate:** Link the desired containers to restrict container access and reduce the attack surface, enabling only necessary and desired communication.
 
 2. **Vulnerable and Malicious Container Images:**
-- **Rist:** Docker Hub is open to everyone, so you should make sure you trust the publisher when you deploy a new repo.
-- **Mitigate:** Avoid untested or untrusted builds to prevent the introduction of vulnerabilities and malicious code.
+   - **Risk:** Docker Hub is open to everyone, so you should make sure you trust the publisher when you deploy a new repo.
+   - **Mitigate:** Avoid untested or untrusted builds to prevent the introduction of vulnerabilities and malicious code.
 
 3. **Unrestricted Access:**
-- **Rist:** Attackers can often gain access to multiple containers once they’ve gained a foothold in the host.
-- **Mitigate:** Apply the principle of least privilege and eliminate root access where possible. 
+   - **Risk:** Attackers can often gain access to multiple containers once they’ve gained a foothold in the host.
+   - **Mitigate:** Apply the principle of least privilege and eliminate root access where possible. 
 
 4. **Host Kernel Vulnerabilities:**
-- **Rist:** The kernel is exposed to the host and all containers.
-- **Mitigate:** Ensure host operating systems are up to date and vigilantly apply security updates
+   - **Risk:** The kernel is exposed to the host and all containers.
+   - **Mitigate:** Ensure host operating systems are up to date and vigilantly apply security updates
 
 5. **Breaking Out of Containers:**
-- **Rist:** While container breakouts are rare, they are not impossible.
-- **Mitigate:** Never grant root access on the host to a container process.
+   - **Risk:** While container breakouts are rare, they are not impossible.
+   - **Mitigate:** Never grant root access on the host to a container process.
 
 [**Best Practices:**](https://www.tigera.io/learn/guides/container-security-best-practices/docker-security/#:~:text=Security%20aspects%20include%20base%20images,for%20container%20orchestration%20at%20scale.)
 1. **Avoid Root Permissions:** Docker containers don’t run as root by default, so you don’t have to change the default configuration, but you should avoid giving root permissions. 
