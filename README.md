@@ -9,10 +9,11 @@ The main goal of the project is the displaying of "hello world, (name) - retriev
 ## **Blocks of the Project:**
 
 1. [Webserver](https://en.wikipedia.org/wiki/Web_server) [(PHP).](https://www.php.net/)
-   A popular general-purpose scripting language that is especially suited to web development. Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world. 
+   *A popular general-purpose scripting language that is especially suited to web development. Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.* 
 2. [Database](https://en.wikipedia.org/wiki/Database) [(MySQL).](https://www.mysql.com/)
-   MySQL is the world's most popular open source database. MySQL is a widely used relational database management system (RDBMS). MySQL is free and open-source. MySQL is ideal for both small and large applications.
+   *MySQL is the world's most popular open source database. MySQL is a widely used relational database management system (RDBMS). MySQL is free and open-source. MySQL is ideal for both small and large applications.*
 3. [Container (Docker).](https://www.docker.com/resources/what-container/)
+   *A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.*
 
 ## **Folders and Files:**
 Two (02) main folders **(PHP & Database)** and two (02) sub folders inside PHP **(src & MySQL)**.
@@ -74,7 +75,7 @@ Two (02) main folders **(PHP & Database)** and two (02) sub folders inside PHP *
 
             docker-compose run      
             
-7.  Access the MySQL database through localhost:**port** assigned.
+7.  Access the MySQL database through by typing localhost:**port** assigned in the browser url box.
 8.  [Create tables on the MySQL database.](https://www.ipower.com/help/article/creating-mysql-tables-in-phpmyadmin)
 9.  [Export created table file from the MySQL database.](https://help.dreamhost.com/hc/en-us/articles/214395738-phpMyAdmin-How-to-backup-or-export-a-database-or-table)
 10. [Stop and remove containers, networks of the **Docker-compose.yml**.](https://docs.docker.com/engine/reference/commandline/compose_down/)
@@ -85,7 +86,7 @@ Two (02) main folders **(PHP & Database)** and two (02) sub folders inside PHP *
 
             docker-compose run    
 
-13.  Access the webserver through localhost:**port** assigned to view **"hello world, (name).**
+13.  Access the webserver through typing localhost:**port** assigned in the browser url box to view **"hello world, (name).**
 
 ## **Docker Tips:**
    In this section are presented several Docker useful commands.
